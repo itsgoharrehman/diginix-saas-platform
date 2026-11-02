@@ -483,6 +483,7 @@ window.apiCall = async function (action, data = null) {
                     }
                 }
                 const SLUG_ID_MAP = {
+                    '31': 'ai-growth-systems-ecommerce-dtc-brands-service-agency-2025-2026',
                     '30': 'ai-video-generation-for-healthcare-ads-trt-hrt-glp-1-clinics',
                     '29': 'ai-object-detection-counting-large-equipment-industrial-inventory',
                     '28': 'ai-generated-doctors-and-patients-for-healthcare-marketing-compliance',
@@ -560,6 +561,7 @@ window.apiCall = async function (action, data = null) {
                     }
                 }
                 const SLUG_ID_MAP = {
+                    '31': 'ai-growth-systems-ecommerce-dtc-brands-service-agency-2025-2026',
                     '30': 'ai-video-generation-for-healthcare-ads-trt-hrt-glp-1-clinics',
                     '29': 'ai-object-detection-counting-large-equipment-industrial-inventory',
                     '28': 'ai-generated-doctors-and-patients-for-healthcare-marketing-compliance',
