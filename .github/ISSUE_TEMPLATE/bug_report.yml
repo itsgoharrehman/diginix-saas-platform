@@ -1,0 +1,42 @@
+name: Bug Report
+description: Report a defect or functional issue in the SaaS platform.
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide detailed reproduction steps to resolve the issue.
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, version, and operating system.
+      placeholder: "e.g., Chrome 124 on Windows 11"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step instructions to reproduce the issue.
+      placeholder: |
+        1. Navigate to /auth.html
+        2. Attempt login with client credentials
+        3. Observe dashboard redirect failure
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What was expected to occur?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually occurred? Include console errors if applicable.
+    validations:
+      required: true
