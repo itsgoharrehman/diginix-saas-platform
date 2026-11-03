@@ -1,6 +1,20 @@
-# diginix-saas-platform
+<div align="center">
+  <h1>diginix-saas-platform</h1>
+  <p>Enterprise serverless SaaS portal for digital agencies featuring client dashboards, Supabase authentication, service estimation, and Cloudflare Workers API.</p>
 
-[![Release](https://img.shields.io/badge/Release-v1.0.0-0969da?style=flat-square)](https://github.com/itsgoharrehman/diginix-saas-platform/releases/tag/v1.0.0) [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![Supabase](https://img.shields.io/badge/Supabase-Database%20%26%20Auth-3FCF8E?style=flat-square&logo=supabase&logoColor=white)](https://supabase.com) [![Cloudflare](https://img.shields.io/badge/Cloudflare_Workers-API%20Gateway-F38020?style=flat-square&logo=cloudflareworkers&logoColor=white)](https://workers.cloudflare.com) [![Netlify](https://img.shields.io/badge/Netlify-CDN%20Delivery-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://www.netlify.com) [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red?style=flat-square)](LICENSE)
+  <p>
+    <a href="https://github.com/itsgoharrehman/diginix-saas-platform/releases"><img src="https://img.shields.io/github/v/release/itsgoharrehman/diginix-saas-platform?style=flat-square&logo=github&logoColor=white" alt="Release"></a>
+    <img src="https://img.shields.io/badge/License-Proprietary-red?style=flat-square&logo=gitbook&logoColor=white" alt="License">
+    <img src="https://img.shields.io/badge/Runtime-Vanilla_JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
+    <img src="https://img.shields.io/badge/Database-Supabase_PostgreSQL-3FCF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase">
+    <img src="https://img.shields.io/badge/Edge-Cloudflare_Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare Workers">
+    <img src="https://img.shields.io/badge/Hosting-Netlify_CDN-00C7B7?style=flat-square&logo=netlify&logoColor=white" alt="Netlify">
+    <a href="https://github.com/itsgoharrehman/diginix-saas-platform/stargazers"><img src="https://img.shields.io/github/stars/itsgoharrehman/diginix-saas-platform?style=flat-square&logo=github&logoColor=white" alt="Stars"></a>
+    <a href="https://github.com/itsgoharrehman/diginix-saas-platform/issues"><img src="https://img.shields.io/github/issues/itsgoharrehman/diginix-saas-platform?style=flat-square&logo=github&logoColor=white" alt="Issues"></a>
+  </p>
+</div>
+
+---
 
 An enterprise-grade, serverless software-as-a-service web portal engineered for digital software consulting, web engineering, and digital marketing agencies.
 
