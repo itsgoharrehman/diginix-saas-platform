@@ -1,37 +1,37 @@
-# Contributing Guidelines
+# Contribution Guidelines
 
-Thank you for your interest in contributing. We welcome contributions that improve performance, resolve bugs, enhance documentation, or expand feature capabilities.
+This repository contains proprietary software. Contributions are subject to the terms and architectural invariants detailed below.
+
+---
 
 ## Code of Conduct
 
-All contributors and participants are expected to adhere to the standards described in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+All contributors and team members are required to uphold the standards described in our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-## Getting Started
+---
 
-1. Fork the repository on GitHub.
-2. Clone your fork locally:
-   ```bash
-   git clone https://github.com/<your-username>/<repo-name>.git
-   cd <repo-name>
-   ```
-3. Create a descriptive feature branch:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
+## Architectural Principles
 
-## Development Standards
+1. **Vanilla Standards**: Do not introduce heavy frontend frameworks (React, Angular, Vue) or UI wrapper libraries. Keep page execution lightweight, modular, and fast.
+2. **Strict RLS Verification**: Any additions to `supabase_setup.sql` must include strict Row-Level Security policies verifying that clients cannot inspect or modify other clients' records.
+3. **Zero Secret Leakage**: Never commit API secret keys, service role credentials, or production environment values.
+4. **Input Sanitization**: Ensure all form inputs and URL parameters are sanitized before rendering into the DOM or passing to database queries.
 
-* **Clean Code**: Follow idiomatic patterns for the project language.
-* **Testing**: Ensure existing test suites pass and write new tests for added functionality.
-* **Documentation**: Update relevant README or API docs if altering functional behavior.
-* **Commit Messages**: Write concise, imperative commit messages (e.g. `feat: add request timeout handler`).
+---
 
-## Submitting Pull Requests
+## Branch and Commit Conventions
 
-1. Rebase your branch against the latest `main` branch.
-2. Push changes to your fork.
-3. Open a Pull Request against `main` with a clear description of the problem solved and test results.
+* Branches: `feature/<description>`, `fix/<description>`, `docs/<description>`
+* Commits: Follow standard conventional commits format:
+  * `feat: add milestone progress bar to client profile`
+  * `fix: resolve input sanitization in contact form`
+  * `perf: optimize webp image compression for blog assets`
+  * `sec: harden rls policy on client invoice table`
 
-## Reporting Bugs
+---
 
-Please search existing issues before opening a new bug report. Use the provided bug report template to supply reproducible steps, system details, and expected outcomes.
+## Pull Request Guidelines
+
+1. Verify that your branch compiles cleanly and does not introduce console errors.
+2. Ensure no credentials or confidential client data are included in changes.
+3. Submit a Pull Request targeting the `main` branch and complete the security checklist.
