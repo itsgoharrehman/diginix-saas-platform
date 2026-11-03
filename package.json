@@ -1,0 +1,30 @@
+{
+  "name": "diginix-saas-platform",
+  "version": "1.0.0",
+  "description": "Enterprise serverless SaaS portal for digital agencies featuring client dashboards, Supabase authentication, service estimation, and Cloudflare Workers API.",
+  "main": "js/script.js",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "wrangler dev",
+    "deploy:worker": "wrangler deploy"
+  },
+  "keywords": [
+    "agency-platform",
+    "client-portal",
+    "cloudflare-workers",
+    "dashboard",
+    "jamstack",
+    "postgresql",
+    "saas",
+    "serverless",
+    "supabase",
+    "vanilla-javascript"
+  ],
+  "author": "Gohar Rehman <goharrehmanfsd260@gmail.com> (https://github.com/itsgoharrehman)",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "serve": "^14.2.4",
+    "wrangler": "^3.114.0"
+  }
+}
