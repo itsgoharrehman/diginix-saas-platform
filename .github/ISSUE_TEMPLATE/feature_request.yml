@@ -1,0 +1,30 @@
+name: Feature Request
+description: Propose a functional improvement or architectural enhancement.
+title: "[FEATURE]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit a structured proposal for improving the platform.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Business or Workflow Need
+      description: What challenge or opportunity does this feature address?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Implementation
+      description: Describe the expected behavior and implementation approach.
+    validations:
+      required: true
+  - type: textarea
+    id: security
+    attributes:
+      label: Security and Data Isolation Impact
+      description: Does this impact Supabase RLS policies or client privacy boundaries?
+    validations:
+      required: false
