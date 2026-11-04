@@ -483,6 +483,7 @@ window.apiCall = async function (action, data = null) {
                     }
                 }
                 const SLUG_ID_MAP = {
+                    '33': 'ai-transformation-is-a-problem-of-governance',
                     '32': 'custom-web-application-development-guide',
                     '31': 'ai-growth-systems-ecommerce-dtc-brands-service-agency-2025-2026',
                     '30': 'ai-video-generation-for-healthcare-ads-trt-hrt-glp-1-clinics',
@@ -562,6 +563,7 @@ window.apiCall = async function (action, data = null) {
                     }
                 }
                 const SLUG_ID_MAP = {
+                    '33': 'ai-transformation-is-a-problem-of-governance',
                     '32': 'custom-web-application-development-guide',
                     '31': 'ai-growth-systems-ecommerce-dtc-brands-service-agency-2025-2026',
                     '30': 'ai-video-generation-for-healthcare-ads-trt-hrt-glp-1-clinics',
