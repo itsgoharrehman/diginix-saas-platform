@@ -483,6 +483,7 @@ window.apiCall = async function (action, data = null) {
                     }
                 }
                 const SLUG_ID_MAP = {
+                    '34': 'blossomservicesinc-com-ai-first-product',
                     '33': 'ai-transformation-is-a-problem-of-governance',
                     '32': 'custom-web-application-development-guide',
                     '31': 'ai-growth-systems-ecommerce-dtc-brands-service-agency-2025-2026',
@@ -563,6 +564,7 @@ window.apiCall = async function (action, data = null) {
                     }
                 }
                 const SLUG_ID_MAP = {
+                    '34': 'blossomservicesinc-com-ai-first-product',
                     '33': 'ai-transformation-is-a-problem-of-governance',
                     '32': 'custom-web-application-development-guide',
                     '31': 'ai-growth-systems-ecommerce-dtc-brands-service-agency-2025-2026',
