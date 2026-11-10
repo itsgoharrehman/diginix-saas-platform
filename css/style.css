@@ -2025,4 +2025,43 @@ code:not(.code-block code) {
     stroke-linejoin: round;
 }
 
+/* --- Dr Nadeem Nazeer Profile Button --- */
+.profile-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--color-canvas-night-soft);
+    color: var(--color-on-dark);
+    padding: 12px 20px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
+.profile-btn:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+.profile-btn .profile-icon {
+    width: 16px;
+    height: 16px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.profile-btn .profile-arrow {
+    width: 14px;
+    height: 14px;
+    color: rgba(255, 255, 255, 0.4);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.profile-btn:hover .profile-arrow {
+    color: #ffffff;
+    transform: translate(2px, -2px);
+}
