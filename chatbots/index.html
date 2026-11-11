@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        // Instant check for maintenance mode to prevent page flash of content
+        try {
+            if (JSON.parse(localStorage.getItem('settings') || '{}').maintenanceMode) {
+                document.documentElement.style.display = 'none';
+                window.location.replace('/maintenance.html');
+            }
+        } catch (e) {}
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-3363493243397953">
+    <title>Chatbots | Explore Our AI Chatbots</title>
+    <meta name="description"
+        content="Explore our collection of AI chatbots and discover smart tools designed to help you get answers, complete tasks, and improve productivity.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://diginixit.com/chatbots/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://diginixit.com/chatbots/">
+    <meta property="og:title" content="Chatbots | Explore Our AI Chatbots">
+    <meta property="og:description"
+        content="Explore our collection of AI chatbots and discover smart tools designed to help you get answers, complete tasks, and improve productivity.">
+    <meta property="og:image" content="https://diginixit.com/images/og-home.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://diginixit.com/chatbots/">
+    <meta name="twitter:title" content="Chatbots | Explore Our AI Chatbots">
+    <meta name="twitter:description"
+        content="Explore our collection of AI chatbots and discover smart tools designed to help you get answers, complete tasks, and improve productivity.">
+    <meta name="twitter:image" content="https://diginixit.com/images/og-home.jpg">
+
+    <!-- DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta name="color-scheme" content="light">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        if (typeof tailwind !== 'undefined') {
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: { sans: ['Inter', 'sans-serif'] },
+                        colors: {
+                            canvas: '#ffffff',
+                            'canvas-soft': '#fafafa',
+                            'canvas-night': '#1c1c1c',
+                            ink: '#171717',
+                            'ink-mute': '#707070',
+                            'ink-faint': '#b2b2b2',
+                            primary: '#3ecf8e',
+                            'primary-deep': '#24b47e',
+                            hairline: '#dfdfdf',
+                            'hairline-strong': '#c7c7c7',
+                            'hairline-cool': '#ededed'
+                        },
+                        letterSpacing: { tighter: '-0.04em', tight: '-0.02em' }
+                    }
+                }
+            };
+        }
+    </script>
+
+    <!-- Core Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Structured Data: BreadcrumbList + CollectionPage / ItemList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://diginixit.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Chatbots",
+                "item": "https://diginixit.com/chatbots/"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://diginixit.com/chatbots/#webpage",
+        "url": "https://diginixit.com/chatbots/",
+        "name": "Chatbots | Explore Our AI Chatbots",
+        "description": "Explore our collection of AI chatbots and discover smart tools designed to help you get answers, complete tasks, and improve productivity.",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "DiginixIT",
+            "url": "https://diginixit.com/"
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "DiginixIT AI Chatbots Directory",
+            "numberOfItems": 9,
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "DiginixIT Knowledge Assistant",
+                    "description": "Semantic search chatbot built for DiginixIT to answer questions about our services, workflows, and engineering capabilities.",
+                    "url": "https://diginixit-chatbot.vercel.app/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Chat Assistant",
+                    "description": "Ask questions and get helpful answers in a fast, conversational general AI chat interface.",
+                    "url": "https://toolkit-topaz-three.vercel.app/chatbot"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Product & Market Research",
+                    "description": "Research products, compare features and prices, and explore market alternatives with live web sources.",
+                    "url": "https://toolkit-topaz-three.vercel.app/product-research"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Laws & Regulations",
+                    "description": "Research current laws and regulations with jurisdiction-aware answers and official source links.",
+                    "url": "https://toolkit-topaz-three.vercel.app/law-research"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "name": "Science Research",
+                    "description": "Explore scientific questions using current web sources, research papers, and evidence-aware explanations.",
+                    "url": "https://toolkit-topaz-three.vercel.app/science-research"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "name": "Medical Research",
+                    "description": "Find evidence-based medical information and clinical research summaries with clear sources and limitations.",
+                    "url": "https://toolkit-topaz-three.vercel.app/medical-research"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "name": "Business Research",
+                    "description": "Research industries, competitors, customers, and business opportunities using current web sources.",
+                    "url": "https://toolkit-topaz-three.vercel.app/business-research"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "name": "Language Tutor",
+                    "description": "Practice a language through tailored grammar explanations, writing corrections, vocabulary, and conversation.",
+                    "url": "https://toolkit-topaz-three.vercel.app/language-tutor"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "name": "Toolkit Hub",
+                    "description": "Open the full research and productivity suite featuring AI chat, domain assistants, and website checks.",
+                    "url": "https://toolkit-topaz-three.vercel.app/"
+                }
+            ]
+        }
+    }
+    </script>
+</head>
+
+<body class="bg-canvas text-ink min-h-screen flex flex-col justify-between">
+
+    <div class="noise"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4 px-6 md:px-12"
+        aria-label="Main Navigation">
+        <div class="max-w-[1280px] mx-auto flex justify-between items-center">
+            <a href="/" class="text-xl font-medium tracking-tighter text-ink"
+                style="letter-spacing: -0.04em;">DIGINIXIT.</a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-5 lg:space-x-8 items-center text-sm font-medium">
+                <a href="/" class="nav-item-link" id="nav-home">Home</a>
+                <div class="nav-dropdown-wrapper relative group" id="nav-services-dropdown">
+                    <a href="/services.html" class="nav-item-link inline-flex items-center gap-1.5 py-2" id="nav-services" aria-haspopup="true" aria-expanded="false">
+                        <span>Our Services</span>
+                        <svg class="w-3.5 h-3.5 nav-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    </a>
+                    <div class="nav-dropdown-menu">
+                        <a href="/social-media-marketing.html" class="nav-dropdown-item">
+                            <span class="item-title">Social Media Marketing</span>
+                            <span class="item-desc">Audience acquisition &amp; organic distribution loops</span>
+                        </a>
+                        <a href="/law-compliance.html" class="nav-dropdown-item">
+                            <span class="item-title">Law &amp; Tech Compliance And consultancy</span>
+                            <span class="item-desc">GDPR audits, enterprise MSAs &amp; IP protection</span>
+                        </a>
+                        <a href="/technical-seo.html" class="nav-dropdown-item">
+                            <span class="item-title">Technical SEO</span>
+                            <span class="item-desc">Core Web Vitals &amp; entity search architecture</span>
+                        </a>
+                        <a href="/corporate-finance.html" class="nav-dropdown-item">
+                            <span class="item-title">Corporate Finance</span>
+                            <span class="item-desc">Dynamic financial models, valuations &amp; runways</span>
+                        </a>
+                        <a href="/web-engineering.html" class="nav-dropdown-item">
+                            <span class="item-title">Web Engineering</span>
+                            <span class="item-desc">High-performance apps &amp; custom SaaS architecture</span>
+                        </a>
+                        <a href="/ui-ux-design.html" class="nav-dropdown-item">
+                            <span class="item-title">UI/UX Product Design</span>
+                            <span class="item-desc">Bespoke design systems &amp; cognitive flows</span>
+                        </a>
+                        <div class="nav-dropdown-divider"></div>
+                        <a href="/services.html" class="nav-dropdown-footer">
+                            <span>Overview: All Capabilities</span>
+                            <span class="text-primary font-bold">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="/chatbots/" class="nav-item-link active-nav-link" id="nav-chatbots" aria-current="page">Chatbots</a>
+                <a href="/blog.html" class="nav-item-link" id="nav-blog">Blog</a>
+                <a href="/contact.html" class="nav-item-link" id="nav-contact">Contact</a>
+            </div>
+
+            <!-- Desktop Auth / CTA -->
+            <div class="hidden md:flex space-x-4 items-center" id="desktop-auth-container">
+                <a href="/auth.html?mode=signin" class="text-sm font-medium text-ink-mute hover:text-ink transition-colors" id="btn-signin">Sign In</a>
+                <div class="magnetic-wrap">
+                    <a href="/auth.html?mode=signup" class="btn-primary" id="btn-signup">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Mobile Navbar Controls -->
+            <div class="flex md:hidden items-center space-x-3">
+                <button id="hamburger-btn" class="p-2 text-ink focus:outline-none" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer Overlay Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-canvas transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-between p-8 pt-24 overflow-y-auto">
+        <div class="flex flex-col space-y-4 text-xl font-medium" style="letter-spacing: -0.02em;">
+            <a href="/" class="mobile-nav-link hover:text-ink-mute transition-colors">Home</a>
+            <div class="mobile-services-accordion">
+                <button type="button" id="mobile-services-toggle" class="w-full flex items-center justify-between text-xl font-medium hover:text-ink-mute transition-colors py-1 text-left" aria-expanded="false">
+                    <span>Our Services</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200" id="mobile-services-chevron"></i>
+                </button>
+                <div id="mobile-services-list" class="hidden pl-4 pr-1 py-3 flex-col space-y-3 text-sm text-ink-mute border-l border-hairline mt-2">
+                    <a href="/social-media-marketing.html" class="hover:text-ink transition-colors block">Social Media Marketing</a>
+                    <a href="/law-compliance.html" class="hover:text-ink transition-colors block">Law &amp; Tech Compliance And consultancy</a>
+                    <a href="/technical-seo.html" class="hover:text-ink transition-colors block">Technical SEO</a>
+                    <a href="/corporate-finance.html" class="hover:text-ink transition-colors block">Corporate Finance</a>
+                    <a href="/web-engineering.html" class="hover:text-ink transition-colors block">Web Engineering</a>
+                    <a href="/ui-ux-design.html" class="hover:text-ink transition-colors block">UI/UX Product Design</a>
+                    <a href="/services.html" class="text-xs font-semibold text-primary pt-1 block">All Capabilities &rarr;</a>
+                </div>
+            </div>
+            <a href="/chatbots/" class="mobile-nav-link hover:text-ink-mute transition-colors" id="mobile-nav-chatbots" aria-current="page">Chatbots</a>
+            <a href="/blog.html" class="mobile-nav-link hover:text-ink-mute transition-colors">Blog</a>
+            <a href="/contact.html" class="mobile-nav-link hover:text-ink-mute transition-colors">Contact</a>
+        </div>
+
+        <div class="flex flex-col space-y-4 pt-6" id="mobile-auth-container">
+            <a href="/auth.html?mode=signin" class="w-full text-center py-4 border border-hairline rounded-md font-medium hover:bg-canvas-soft transition-colors text-sm" id="mobile-btn-signin">Sign In</a>
+            <a href="/auth.html?mode=signup" class="btn-primary w-full text-center py-4 text-sm" id="mobile-btn-signup">Get Started</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-1">
+        <!-- Introductory Header -->
+        <section class="pt-32 pb-12 bg-canvas border-b border-hairline">
+            <div class="container-main">
+                <nav class="mb-8 flex items-center space-x-2 text-xs font-medium text-ink-mute uppercase tracking-widest" aria-label="Breadcrumb">
+                    <a href="/" class="hover:text-ink transition-colors">Home</a>
+                    <span>/</span>
+                    <span class="text-ink font-medium">Chatbots</span>
+                </nav>
+
+                <div class="max-w-3xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-canvas-soft border border-hairline text-xs font-medium text-ink-mute mb-6">
+                        <span class="w-1.5 h-1.5 rounded-full bg-primary" aria-hidden="true"></span>
+                        <span>AI Assistant Directory</span>
+                    </div>
+                    <h1 class="display-xxl mb-6">Explore Our AI Chatbots</h1>
+                    <p class="body-lg text-ink-mute leading-relaxed max-w-2xl">
+                        Discover purpose-built AI chatbots ready to launch in your browser. Choose a specialized assistant below to get reliable answers, run live source-backed research, practice languages, and accelerate daily workflows.
+                    </p>
+                </div>
+
+                <div class="mt-10 pt-8 border-t border-hairline-cool grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl text-sm">
+                    <div>
+                        <div class="font-semibold text-ink">9 Specialized Tools</div>
+                        <p class="text-xs text-ink-mute mt-1">Direct links to general chat, research assistants, tutoring, and site guidance.</p>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-ink">Verified Purpose &amp; Scope</div>
+                        <p class="text-xs text-ink-mute mt-1">Each card states exact capabilities and access requirements up front.</p>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-ink">One-Click Launch</div>
+                        <p class="text-xs text-ink-mute mt-1">Click any card to open that chatbot cleanly in a dedicated browser tab.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot Directory & Filter Grid -->
+        <section class="section-padding bg-canvas-soft">
+            <div class="container-main">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+                    <div>
+                        <h2 class="display-xl mb-2">Available AI Chatbots</h2>
+                        <p id="chatbots-results-count" class="text-sm text-ink-mute" aria-live="polite">Showing 9 of 9 chatbots</p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <div id="chatbots-filter-bar" class="chatbots-filter-bar" role="group" aria-label="Filter chatbots by category">
+                            <button type="button" class="chatbot-filter-pill" data-filter="all" aria-pressed="true">All (9)</button>
+                            <button type="button" class="chatbot-filter-pill" data-filter="general" aria-pressed="false">General</button>
+                            <button type="button" class="chatbot-filter-pill" data-filter="research" aria-pressed="false">Research</button>
+                            <button type="button" class="chatbot-filter-pill" data-filter="specialized" aria-pressed="false">Specialized</button>
+                        </div>
+
+                        <div class="relative min-w-[230px]">
+                            <label for="chatbots-search-input" class="sr-only">Search chatbots by name or purpose</label>
+                            <i data-lucide="search" class="w-4 h-4 text-ink-mute absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" aria-hidden="true"></i>
+                            <input type="search" id="chatbots-search-input" class="premium-input pl-10 pr-4 py-2 text-sm bg-canvas"
+                                placeholder="Search chatbots...">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="chatbots-grid" class="chatbots-grid" aria-label="AI Chatbots Collection">
+                    <!-- Card 1 -->
+                    <article class="chatbot-card" data-chatbot-id="diginixit-knowledge-assistant" data-filter-group="specialized">
+                        <header class="chatbot-card-header">
+                            <div class="chatbot-card-top">
+                                <span class="chatbot-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+                                </span>
+                                <span class="chatbot-card-badge">Site Assistant</span>
+                            </div>
+                            <h3 class="chatbot-card-title">
+                                <a href="https://diginixit-chatbot.vercel.app/" target="_blank" rel="noopener noreferrer" class="chatbot-card-link">DiginixIT Knowledge Assistant<span class="sr-only"> (opens in a new tab)</span></a>
+                            </h3>
+                        </header>
+                        <p class="chatbot-card-desc">Semantic search chatbot built for DiginixIT to answer questions about our services, workflows, and engineering capabilities.</p>
+                        <div class="chatbot-card-footer">
+                            <span class="chatbot-access-note"><span class="chatbot-access-dot" aria-hidden="true"></span><span>Instant Access</span></span>
+                            <span class="chatbot-card-cta" aria-hidden="true"><span>Open Chatbot</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="chatbot-card" data-chatbot-id="chat-assistant" data-filter-group="general">
+                        <header class="chatbot-card-header">
+                            <div class="chatbot-card-top">
+                                <span class="chatbot-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                </span>
+                                <span class="chatbot-card-badge">AI Chatbot</span>
+                            </div>
+                            <h3 class="chatbot-card-title">
+                                <a href="https://toolkit-topaz-three.vercel.app/chatbot" target="_blank" rel="noopener noreferrer" class="chatbot-card-link">Chat Assistant<span class="sr-only"> (opens in a new tab)</span></a>
+                            </h3>
+                        </header>
+                        <p class="chatbot-card-desc">Ask questions and get helpful answers in a fast, conversational general AI chat interface.</p>
+                        <div class="chatbot-card-footer">
+                            <span class="chatbot-access-note"><span class="chatbot-access-dot" aria-hidden="true"></span><span>No login required</span></span>
+                            <span class="chatbot-card-cta" aria-hidden="true"><span>Open Chatbot</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="chatbot-card" data-chatbot-id="product-market-research" data-filter-group="research">
+                        <header class="chatbot-card-header">
+                            <div class="chatbot-card-top">
+                                <span class="chatbot-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                </span>
+                                <span class="chatbot-card-badge">Product Research</span>
+                            </div>
+                            <h3 class="chatbot-card-title">
+                                <a href="https://toolkit-topaz-three.vercel.app/product-research" target="_blank" rel="noopener noreferrer" class="chatbot-card-link">Product &amp; Market Research<span class="sr-only"> (opens in a new tab)</span></a>
+                            </h3>
+                        </header>
+                        <p class="chatbot-card-desc">Research products, compare features and prices, and explore market alternatives with live web sources.</p>
+                        <div class="chatbot-card-footer">
+                            <span class="chatbot-access-note"><span class="chatbot-access-dot" aria-hidden="true"></span><span>No login required</span></span>
+                            <span class="chatbot-card-cta" aria-hidden="true"><span>Open Chatbot</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="chatbot-card" data-chatbot-id="laws-regulations" data-filter-group="research">
+                        <header class="chatbot-card-header">
+                            <div class="chatbot-card-top">
+                                <span class="chatbot-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+                                </span>
+                                <span class="chatbot-card-badge">Law Research</span>
+                            </div>
+                            <h3 class="chatbot-card-title">
+                                <a href="https://toolkit-topaz-three.vercel.app/law-research" target="_blank" rel="noopener noreferrer" class="chatbot-card-link">Laws &amp; Regulations<span class="sr-only"> (opens in a new tab)</span></a>
+                            </h3>
+                        </header>
+                        <p class="chatbot-card-desc">Research current laws and regulations with jurisdiction-aware answers and official source links.</p>
+                        <div class="chatbot-card-footer">
+                            <span class="chatbot-access-note"><span class="chatbot-access-dot" aria-hidden="true"></span><span>No login required</span></span>
+                            <span class="chatbot-card-cta" aria-hidden="true"><span>Open Chatbot</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="chatbot-card" data-chatbot-id="science-research" data-filter-group="research">
+                        <header class="chatbot-card-header">
+                            <div class="chatbot-card-top">
+                                <span class="chatbot-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg>
+                                </span>
+                                <span class="chatbot-card-badge">Science Research</span>
+                            </div>
+                            <h3 class="chatbot-card-title">
+                                <a href="https://toolkit-topaz-three.vercel.app/science-research" target="_blank" rel="noopener noreferrer" class="chatbot-card-link">Science Research<span class="sr-only"> (opens in a new tab)</span></a>
+                            </h3>
+                        </header>
+                        <p class="chatbot-card-desc">Explore scientific questions using current web sources, research papers, and evidence-aware explanations.</p>
+                        <div class="chatbot-card-footer">
+                            <span class="chatbot-access-note"><span class="chatbot-access-dot" aria-hidden="true"></span><span>Groq API key</span></span>
+                            <span class="chatbot-card-cta" aria-hidden="true"><span>Open Chatbot</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="chatbot-card" data-chatbot-id="medical-research" data-filter-group="research">
+                        <header class="chatbot-card-header">
+                            <div class="chatbot-card-top">
+                                <span class="chatbot-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
+                                </span>
+                                <span class="chatbot-card-badge">Medical Research</span>
+                            </div>
+                            <h3 class="chatbot-card-title">
+                                <a href="https://toolkit-topaz-three.vercel.app/medical-research" target="_blank" rel="noopener noreferrer" class="chatbot-card-link">Medical Research<span class="sr-only"> (opens in a new tab)</span></a>
+                            </h3>
+                        </header>
+                        <p class="chatbot-card-desc">Find evidence-based medical information and clinical research summaries with clear sources and limitations.</p>
+                        <div class="chatbot-card-footer">
+                            <span class="chatbot-access-note"><span class="chatbot-access-dot" aria-hidden="true"></span><span>Groq API key</span></span>
+                            <span class="chatbot-card-cta" aria-hidden="true"><span>Open Chatbot</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+                        </div>
+                    </article>
+
+                    <!-- Card 7 -->
+                    <article class="chatbot-card" data-chatbot-id="business-research" data-filter-group="research">
+                        <header class="chatbot-card-header">
+                            <div class="chatbot-card-top">
+                                <span class="chatbot-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                </span>
+                                <span class="chatbot-card-badge">Business Research</span>
+                            </div>
+                            <h3 class="chatbot-card-title">
+                                <a href="https://toolkit-topaz-three.vercel.app/business-research" target="_blank" rel="noopener noreferrer" class="chatbot-card-link">Business Research<span class="sr-only"> (opens in a new tab)</span></a>
+                            </h3>
+                        </header>
+                        <p class="chatbot-card-desc">Research industries, competitors, customers, and business opportunities using current web sources.</p>
+                        <div class="chatbot-card-footer">
+                            <span class="chatbot-access-note"><span class="chatbot-access-dot" aria-hidden="true"></span><span>Groq API key</span></span>
+                            <span class="chatbot-card-cta" aria-hidden="true"><span>Open Chatbot</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+                        </div>
+                    </article>
+
+                    <!-- Card 8 -->
+                    <article class="chatbot-card" data-chatbot-id="language-tutor" data-filter-group="specialized">
+                        <header class="chatbot-card-header">
+                            <div class="chatbot-card-top">
+                                <span class="chatbot-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+                                </span>
+                                <span class="chatbot-card-badge">Language Tutor</span>
+                            </div>
+                            <h3 class="chatbot-card-title">
+                                <a href="https://toolkit-topaz-three.vercel.app/language-tutor" target="_blank" rel="noopener noreferrer" class="chatbot-card-link">Language Tutor<span class="sr-only"> (opens in a new tab)</span></a>
+                            </h3>
+                        </header>
+                        <p class="chatbot-card-desc">Practice a language through tailored grammar explanations, writing corrections, vocabulary, and conversation.</p>
+                        <div class="chatbot-card-footer">
+                            <span class="chatbot-access-note"><span class="chatbot-access-dot" aria-hidden="true"></span><span>Groq API key</span></span>
+                            <span class="chatbot-card-cta" aria-hidden="true"><span>Open Chatbot</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+                        </div>
+                    </article>
+
+                    <!-- Card 9 -->
+                    <article class="chatbot-card" data-chatbot-id="toolkit-hub" data-filter-group="general">
+                        <header class="chatbot-card-header">
+                            <div class="chatbot-card-top">
+                                <span class="chatbot-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                                </span>
+                                <span class="chatbot-card-badge">All-in-One Workspace</span>
+                            </div>
+                            <h3 class="chatbot-card-title">
+                                <a href="https://toolkit-topaz-three.vercel.app/" target="_blank" rel="noopener noreferrer" class="chatbot-card-link">Toolkit Hub<span class="sr-only"> (opens in a new tab)</span></a>
+                            </h3>
+                        </header>
+                        <p class="chatbot-card-desc">Open the full research and productivity suite featuring AI chat, domain assistants, and website checks.</p>
+                        <div class="chatbot-card-footer">
+                            <span class="chatbot-access-note"><span class="chatbot-access-dot" aria-hidden="true"></span><span>Unified Hub</span></span>
+                            <span class="chatbot-card-cta" aria-hidden="true"><span>Try Now</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Empty Search State -->
+                <div id="chatbots-empty-state" class="hidden text-center py-16 px-6 bg-canvas border border-hairline rounded-xl mt-6">
+                    <h3 class="heading-lg text-ink mb-2">No matching chatbots found</h3>
+                    <p class="text-sm text-ink-mute mb-6">Try clearing your search term or switching back to all categories.</p>
+                    <button type="button" id="chatbots-reset-btn" class="btn-secondary">Show All Chatbots</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workflow Context & Internal Capabilities -->
+        <section class="section-padding bg-canvas border-t border-hairline">
+            <div class="container-main">
+                <div class="max-w-2xl mb-12">
+                    <h2 class="display-xl mb-4">How These Assistants Support Smarter Workflows</h2>
+                    <p class="body-lg text-ink-mute">Each tool in our directory is paired with clear domain context so visitors, researchers, and engineering teams pick the right assistant right away.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="card-feature space-y-3">
+                        <h3 class="heading-lg text-ink">Instant Chat &amp; Site Guidance</h3>
+                        <p class="text-sm text-ink-mute leading-relaxed">
+                            Use the <a href="https://diginixit-chatbot.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-ink font-medium underline decoration-hairline hover:decoration-ink">DiginixIT Knowledge Assistant</a> or <a href="https://toolkit-topaz-three.vercel.app/chatbot" target="_blank" rel="noopener noreferrer" class="text-ink font-medium underline decoration-hairline hover:decoration-ink">Chat Assistant</a> to answer everyday questions or explore our <a href="/services.html" class="text-ink font-medium underline decoration-hairline hover:decoration-ink">engineering and advisory services</a>.
+                        </p>
+                    </div>
+                    <div class="card-feature space-y-3">
+                        <h3 class="heading-lg text-ink">Source-Backed Domain Research</h3>
+                        <p class="text-sm text-ink-mute leading-relaxed">
+                            Dedicated workspaces cover market comparisons, <a href="/law-compliance.html" class="text-ink font-medium underline decoration-hairline hover:decoration-ink">regulatory compliance research</a>, clinical literature, scientific evidence, and competitive business analysis supported by our <a href="/web-engineering.html" class="text-ink font-medium underline decoration-hairline hover:decoration-ink">web engineering architecture</a>.
+                        </p>
+                    </div>
+                    <div class="card-feature space-y-3">
+                        <h3 class="heading-lg text-ink">Transparent Access &amp; Next Steps</h3>
+                        <p class="text-sm text-ink-mute leading-relaxed">
+                            No-login tools run immediately, while science, medical, business, and language assistants use your own Groq API key inside the workspace. Explore our <a href="/blog.html" class="text-ink font-medium underline decoration-hairline hover:decoration-ink">technical blog</a> or <a href="/contact.html" class="text-ink font-medium underline decoration-hairline hover:decoration-ink">contact our team</a> for custom enterprise deployments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frequently Asked Questions -->
+        <section class="section-padding bg-canvas-soft border-t border-hairline">
+            <div class="container-main max-w-4xl">
+                <div class="mb-10">
+                    <h2 class="display-xl mb-3">Frequently Asked Questions</h2>
+                    <p class="text-sm text-ink-mute">Quick details about launching and using our AI chatbots.</p>
+                </div>
+
+                <div class="bg-canvas border border-hairline rounded-xl px-6 md:px-8">
+                    <details class="article-accordion" open>
+                        <summary>Do I need an account to try these AI chatbots?</summary>
+                        <div>No DiginixIT account is required to launch any assistant in the directory. Several tools—including Chat Assistant, Product &amp; Market Research, Laws &amp; Regulations, and the DiginixIT Knowledge Assistant—work with instant access, while Science Research, Medical Research, Business Research, and Language Tutor accept a Groq API key directly inside their workspace.</div>
+                    </details>
+                    <details class="article-accordion">
+                        <summary>Which chatbot should I choose first?</summary>
+                        <div>Pick Chat Assistant for general conversational tasks, Laws &amp; Regulations or Product &amp; Market Research for cited web comparisons, and DiginixIT Knowledge Assistant when looking for information about DiginixIT capabilities. You can also launch Toolkit Hub to switch between tools from one central dashboard.</div>
+                    </details>
+                    <details class="article-accordion">
+                        <summary>Can DiginixIT build a custom AI assistant for our organization?</summary>
+                        <div>Yes. Alongside these public productivity tools, our engineering team builds custom semantic search assistants, internal knowledge bots, and compliant workflow integrations tailored to your private documentation. Reach out through our <a href="/contact.html?service=web-engineering" class="text-ink font-medium underline">contact page</a> to scope a build.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section bg-canvas border-t border-hairline">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="display-xxl mb-6">Need a Custom AI Assistant?</h2>
+                <p class="body-lg max-w-xl mx-auto mb-10 text-ink-mute">Partner with DiginixIT engineers to design secure internal knowledge chatbots, retrieval pipelines, and intelligent SaaS workflows.</p>
+                <div class="magnetic-wrap">
+                    <a href="/contact.html?service=web-engineering" class="btn-primary btn-primary-lg">Start a Conversation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-light">
+        <div
+            class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center text-sm gap-y-4 md:gap-y-0">
+            <div class="font-medium" style="letter-spacing: -0.04em;">DIGINIXIT.</div>
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                <a href="/">Home</a>
+                <a href="/services.html">Services</a>
+                <a href="/chatbots/">Chatbots</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+            <div>&copy; 2026 DiginixIT. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Floating DiginixIT Knowledge Chatbot -->
+    <a href="https://diginixit-chatbot.vercel.app/" target="_blank" rel="noopener noreferrer"
+        class="chatbot-button" aria-label="Open DiginixIT Knowledge Assistant" title="Chat with DiginixIT Assistant">
+        <svg class="w-6 h-6 text-on-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script src="/js/ui-primitives.js" defer></script>
+    <script src="/js/ui-components.js" defer></script>
+    <script src="/js/chatbots-data.js" defer></script>
+    <script src="/js/common.js" defer></script>
+    <script src="/js/script.js" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chatbots = Array.isArray(window.diginixitChatbots) ? window.diginixitChatbots : [];
+            const icons = window.diginixitChatbotIcons || {};
+            const gridEl = document.getElementById('chatbots-grid');
+            const filterBarEl = document.getElementById('chatbots-filter-bar');
+            const searchInputEl = document.getElementById('chatbots-search-input');
+            const resultsCountEl = document.getElementById('chatbots-results-count');
+            const emptyStateEl = document.getElementById('chatbots-empty-state');
+            const resetBtnEl = document.getElementById('chatbots-reset-btn');
+
+            if (!gridEl || chatbots.length === 0) return;
+
+            let activeFilter = 'all';
+            let searchQuery = '';
+
+            const arrowSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>';
+
+            function buildCardNode(item) {
+                const article = document.createElement('article');
+                article.className = 'chatbot-card';
+                article.dataset.chatbotId = item.id || '';
+                article.dataset.filterGroup = item.filterGroup || 'general';
+
+                const header = document.createElement('header');
+                header.className = 'chatbot-card-header';
+
+                const topRow = document.createElement('div');
+                topRow.className = 'chatbot-card-top';
+
+                const iconWrap = document.createElement('span');
+                iconWrap.className = 'chatbot-card-icon';
+                const iconMarkup = icons[item.icon] || icons.bot || '';
+                if (iconMarkup) {
+                    iconWrap.innerHTML = iconMarkup;
+                }
+
+                const badge = document.createElement('span');
+                badge.className = 'chatbot-card-badge';
+                badge.textContent = item.category || 'AI Chatbot';
+
+                topRow.appendChild(iconWrap);
+                topRow.appendChild(badge);
+
+                const heading = document.createElement('h3');
+                heading.className = 'chatbot-card-title';
+
+                const link = document.createElement('a');
+                link.href = item.url;
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                link.className = 'chatbot-card-link';
+                link.appendChild(document.createTextNode(item.name));
+
+                const srNote = document.createElement('span');
+                srNote.className = 'sr-only';
+                srNote.textContent = ' (opens in a new tab)';
+                link.appendChild(srNote);
+
+                heading.appendChild(link);
+                header.appendChild(topRow);
+                header.appendChild(heading);
+
+                const desc = document.createElement('p');
+                desc.className = 'chatbot-card-desc';
+                desc.textContent = item.description || '';
+
+                const footer = document.createElement('div');
+                footer.className = 'chatbot-card-footer';
+
+                const accessNote = document.createElement('span');
+                accessNote.className = 'chatbot-access-note';
+                const dot = document.createElement('span');
+                dot.className = 'chatbot-access-dot';
+                dot.setAttribute('aria-hidden', 'true');
+                const accessText = document.createElement('span');
+                accessText.textContent = item.accessBadge || 'Instant Access';
+                accessNote.appendChild(dot);
+                accessNote.appendChild(accessText);
+
+                const cta = document.createElement('span');
+                cta.className = 'chatbot-card-cta';
+                cta.setAttribute('aria-hidden', 'true');
+                const ctaLabel = document.createElement('span');
+                ctaLabel.textContent = item.ctaText || 'Open Chatbot';
+                cta.appendChild(ctaLabel);
+                cta.insertAdjacentHTML('beforeend', arrowSvg);
+
+                footer.appendChild(accessNote);
+                footer.appendChild(cta);
+
+                article.appendChild(header);
+                article.appendChild(desc);
+                article.appendChild(footer);
+
+                return article;
+            }
+
+            function renderDirectory() {
+                const query = searchQuery.trim().toLowerCase();
+                const filtered = chatbots.filter((item) => {
+                    const matchesGroup = activeFilter === 'all' || item.filterGroup === activeFilter;
+                    if (!matchesGroup) return false;
+                    if (!query) return true;
+                    const haystack = `${item.name} ${item.category} ${item.description} ${item.accessBadge}`.toLowerCase();
+                    return haystack.includes(query);
+                });
+
+                const fragment = document.createDocumentFragment();
+                filtered.forEach((item) => {
+                    fragment.appendChild(buildCardNode(item));
+                });
+
+                gridEl.replaceChildren(fragment);
+
+                if (resultsCountEl) {
+                    resultsCountEl.textContent = `Showing ${filtered.length} of ${chatbots.length} chatbots`;
+                }
+
+                if (emptyStateEl) {
+                    const isEmpty = filtered.length === 0;
+                    emptyStateEl.classList.toggle('hidden', !isEmpty);
+                    gridEl.classList.toggle('hidden', isEmpty);
+                }
+            }
+
+            function syncFilterCounts() {
+                if (!filterBarEl) return;
+                const allBtn = filterBarEl.querySelector('[data-filter="all"]');
+                if (allBtn) {
+                    allBtn.textContent = `All (${chatbots.length})`;
+                }
+            }
+
+            if (filterBarEl) {
+                filterBarEl.addEventListener('click', (event) => {
+                    const btn = event.target.closest('.chatbot-filter-pill');
+                    if (!btn) return;
+                    activeFilter = btn.dataset.filter || 'all';
+                    filterBarEl.querySelectorAll('.chatbot-filter-pill').forEach((pill) => {
+                        pill.setAttribute('aria-pressed', pill === btn ? 'true' : 'false');
+                    });
+                    renderDirectory();
+                });
+            }
+
+            if (searchInputEl) {
+                searchInputEl.addEventListener('input', (event) => {
+                    searchQuery = event.target.value || '';
+                    renderDirectory();
+                });
+            }
+
+            if (resetBtnEl) {
+                resetBtnEl.addEventListener('click', () => {
+                    activeFilter = 'all';
+                    searchQuery = '';
+                    if (searchInputEl) searchInputEl.value = '';
+                    if (filterBarEl) {
+                        filterBarEl.querySelectorAll('.chatbot-filter-pill').forEach((pill) => {
+                            pill.setAttribute('aria-pressed', pill.dataset.filter === 'all' ? 'true' : 'false');
+                        });
+                    }
+                    renderDirectory();
+                });
+            }
+
+            syncFilterCounts();
+            renderDirectory();
+        });
+    </script>
+</body>
+
+</html>
+

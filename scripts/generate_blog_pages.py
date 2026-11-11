@@ -508,7 +508,7 @@ def build_article_html(art, other_articles):
             </a>
 
             <!-- Desktop Nav Items -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-mute" aria-label="Main Navigation">
+            <nav class="hidden md:flex items-center gap-5 lg:gap-8 text-sm font-medium text-ink-mute" aria-label="Main Navigation">
                 <a href="/" class="hover:text-ink transition-colors">Home</a>
                 <div class="nav-dropdown-wrapper relative group" id="nav-services-dropdown">
                     <a href="/services" class="nav-item-link inline-flex items-center gap-1.5 py-2 hover:text-ink transition-colors" id="nav-services" aria-haspopup="true" aria-expanded="false">
@@ -547,6 +547,7 @@ def build_article_html(art, other_articles):
                         </a>
                     </div>
                 </div>
+                <a href="/chatbots/" class="hover:text-ink transition-colors">Chatbots</a>
                 <a href="/blog" class="text-ink font-semibold transition-colors">Blog</a>
                 <a href="/contact" class="hover:text-ink transition-colors">Contact</a>
             </nav>
@@ -566,6 +567,7 @@ def build_article_html(art, other_articles):
         <nav class="flex flex-col gap-6 text-lg font-medium text-ink">
             <a href="/" class="border-b border-hairline pb-3">Home</a>
             <a href="/services" class="border-b border-hairline pb-3">Services</a>
+            <a href="/chatbots/" class="border-b border-hairline pb-3">Chatbots</a>
             <a href="/blog" class="border-b border-hairline pb-3 font-semibold text-primary">Blog</a>
             <a href="/contact" class="border-b border-hairline pb-3">Contact</a>
             <a href="/auth" class="btn-primary mt-4 text-center">Client Portal</a>
@@ -678,6 +680,7 @@ def build_article_html(art, other_articles):
             <div class="flex gap-6">
                 <a href="/" class="hover:text-ink transition-colors">Home</a>
                 <a href="/services" class="hover:text-ink transition-colors">Services</a>
+                <a href="/chatbots/" class="hover:text-ink transition-colors">Chatbots</a>
                 <a href="/blog" class="hover:text-ink transition-colors">Blog</a>
                 <a href="/contact" class="hover:text-ink transition-colors">Contact</a>
             </div>

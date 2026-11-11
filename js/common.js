@@ -1611,12 +1611,12 @@ async function applySiteSettings() {
 
         if (settings.maintenanceMode) {
             if (!isAdminPage && !isMaintenancePage) {
-                window.location.replace('maintenance.html');
+                window.location.replace('/maintenance.html');
                 return;
             }
         } else {
             if (isMaintenancePage) {
-                window.location.replace('index.html');
+                window.location.replace('/index.html');
                 return;
             }
         }
@@ -1685,7 +1685,7 @@ function updateNavbarAuth() {
         if (desktopAuthContainer) {
             desktopAuthContainer.innerHTML = `
                 <div class="flex items-center space-x-4">
-                    <a href="profile.html" class="text-sm font-medium text-secondary hover:text-primary transition-colors" id="nav-profile">Hello, ${safeName}</a>
+                    <a href="/profile.html" class="text-sm font-medium text-secondary hover:text-primary transition-colors" id="nav-profile">Hello, ${safeName}</a>
                     <button id="btn-signout" class="text-sm font-medium hover:text-secondary transition-colors">Sign Out</button>
                 </div>
             `;
@@ -1693,7 +1693,7 @@ function updateNavbarAuth() {
         }
         if (mobileAuthContainer) {
             mobileAuthContainer.innerHTML = `
-                <div class="text-center py-2 text-secondary font-medium"><a href="profile.html" class="hover:text-primary transition-colors">Hello, ${safeName}</a></div>
+                <div class="text-center py-2 text-secondary font-medium"><a href="/profile.html" class="hover:text-primary transition-colors">Hello, ${safeName}</a></div>
                 <button id="mobile-btn-signout" class="w-full text-center py-4 border border-border rounded-full font-medium hover:bg-surface transition-colors">Sign Out</button>
             `;
             document.getElementById('mobile-btn-signout').addEventListener('click', handleSignOut);
@@ -1702,16 +1702,16 @@ function updateNavbarAuth() {
         // Restore default navigation if signed out
         if (desktopAuthContainer) {
             desktopAuthContainer.innerHTML = `
-                <a href="auth.html?mode=signin" class="text-sm font-medium hover:text-secondary transition-colors" id="btn-signin">Sign In</a>
+                <a href="/auth.html?mode=signin" class="text-sm font-medium text-ink-mute hover:text-ink transition-colors" id="btn-signin">Sign In</a>
                 <div class="magnetic-wrap">
-                    <a href="auth.html?mode=signup" class="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-black transition-colors inline-block" id="btn-signup">Get Started</a>
+                    <a href="/auth.html?mode=signup" class="btn-primary" id="btn-signup">Get Started</a>
                 </div>
             `;
         }
         if (mobileAuthContainer) {
             mobileAuthContainer.innerHTML = `
-                <a href="auth.html?mode=signin" class="w-full text-center py-4 border border-border rounded-full font-medium hover:bg-surface transition-colors" id="mobile-btn-signin">Sign In</a>
-                <a href="auth.html?mode=signup" class="w-full text-center py-4 bg-primary text-white rounded-full font-medium hover:bg-black transition-colors" id="mobile-btn-signup">Get Started</a>
+                <a href="/auth.html?mode=signin" class="w-full text-center py-4 border border-hairline rounded-md font-medium hover:bg-canvas-soft transition-colors text-sm" id="mobile-btn-signin">Sign In</a>
+                <a href="/auth.html?mode=signup" class="btn-primary w-full text-center py-4 text-sm" id="mobile-btn-signup">Get Started</a>
             `;
         }
     }
@@ -1723,7 +1723,7 @@ async function handleSignOut() {
         await window.supabase.auth.signOut();
     }
     localStorage.removeItem('currentUser');
-    window.location.href = './';
+    window.location.href = '/';
 }
 
 async function initializeAuth() {
@@ -1860,29 +1860,87 @@ function initServicesDropdown() {
 
 // --- 8. Highlight Active Page Link ---
 function highlightActiveNav() {
-    const currentPath = window.location.pathname;
-    const pageName = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+    const rawPath = window.location.pathname || '/';
+    const normalizedPath = rawPath.replace(/\/+$/, '') || '/';
+    const pageName = normalizedPath === '/' ? '' : normalizedPath.substring(normalizedPath.lastIndexOf('/') + 1);
+
+    const pathMap = {
+        '/': 'nav-home',
+        '/index.html': 'nav-home',
+        '/services': 'nav-services',
+        '/services.html': 'nav-services',
+        '/web-engineering': 'nav-services',
+        '/web-engineering.html': 'nav-services',
+        '/ui-ux-design': 'nav-services',
+        '/ui-ux-design.html': 'nav-services',
+        '/technical-seo': 'nav-services',
+        '/technical-seo.html': 'nav-services',
+        '/social-media-marketing': 'nav-services',
+        '/social-media-marketing.html': 'nav-services',
+        '/law-compliance': 'nav-services',
+        '/law-compliance.html': 'nav-services',
+        '/corporate-finance': 'nav-services',
+        '/corporate-finance.html': 'nav-services',
+        '/chatbots': 'nav-chatbots',
+        '/chatbots/index.html': 'nav-chatbots',
+        '/blog': 'nav-blog',
+        '/blog.html': 'nav-blog',
+        '/article': 'nav-blog',
+        '/article.html': 'nav-blog',
+        '/profile': 'nav-profile',
+        '/profile.html': 'nav-profile',
+        '/contact': 'nav-contact',
+        '/contact.html': 'nav-contact'
+    };
 
     const navMap = {
         'index.html': 'nav-home',
         '': 'nav-home',
         'services.html': 'nav-services',
+        'services': 'nav-services',
         'web-engineering.html': 'nav-services',
+        'web-engineering': 'nav-services',
         'ui-ux-design.html': 'nav-services',
+        'ui-ux-design': 'nav-services',
         'technical-seo.html': 'nav-services',
+        'technical-seo': 'nav-services',
         'social-media-marketing.html': 'nav-services',
+        'social-media-marketing': 'nav-services',
         'law-compliance.html': 'nav-services',
+        'law-compliance': 'nav-services',
         'corporate-finance.html': 'nav-services',
+        'corporate-finance': 'nav-services',
+        'chatbots': 'nav-chatbots',
         'blog.html': 'nav-blog',
+        'blog': 'nav-blog',
         'article.html': 'nav-blog',
+        'article': 'nav-blog',
         'profile.html': 'nav-profile',
-        'contact.html': 'nav-contact'
+        'profile': 'nav-profile',
+        'contact.html': 'nav-contact',
+        'contact': 'nav-contact'
     };
 
-    const activeId = navMap[pageName] || 'nav-home';
+    let activeId = pathMap[normalizedPath] || navMap[pageName] || null;
+    if (!activeId && normalizedPath.startsWith('/chatbots/')) {
+        activeId = 'nav-chatbots';
+    } else if (!activeId && normalizedPath.startsWith('/blog/')) {
+        activeId = 'nav-blog';
+    } else if (!activeId) {
+        activeId = 'nav-home';
+    }
+
     const activeLink = document.getElementById(activeId);
     if (activeLink) {
         activeLink.classList.add('active-nav-link');
+        activeLink.setAttribute('aria-current', 'page');
+    }
+
+    if (activeId === 'nav-chatbots') {
+        const mobileChatbotsLink = document.getElementById('mobile-nav-chatbots');
+        if (mobileChatbotsLink) {
+            mobileChatbotsLink.setAttribute('aria-current', 'page');
+        }
     }
 }
 
@@ -1969,13 +2027,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 device = /iPad/i.test(ua) ? 'Tablet' : 'Mobile';
             }
             // Page URL detection
-            const pageUrl = window.location.pathname.split('/').pop() || 'index.html';
+            const rawPath = window.location.pathname || '/';
+            const pageUrl = rawPath === '/' ? '/index.html' : rawPath;
             
             return {
                 ip_address: ip || '127.0.0.1',
                 country: country || 'Unknown',
                 device: device,
-                page_url: '/' + pageUrl,
+                page_url: pageUrl,
                 user_agent: ua
             };
         }
