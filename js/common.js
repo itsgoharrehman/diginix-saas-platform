@@ -483,6 +483,7 @@ window.apiCall = async function (action, data = null) {
                     }
                 }
                 const SLUG_ID_MAP = {
+                    '35': 'does-webware-ai-have-a-blog',
                     '34': 'blossomservicesinc-com-ai-first-product',
                     '33': 'ai-transformation-is-a-problem-of-governance',
                     '32': 'custom-web-application-development-guide',
@@ -564,6 +565,7 @@ window.apiCall = async function (action, data = null) {
                     }
                 }
                 const SLUG_ID_MAP = {
+                    '35': 'does-webware-ai-have-a-blog',
                     '34': 'blossomservicesinc-com-ai-first-product',
                     '33': 'ai-transformation-is-a-problem-of-governance',
                     '32': 'custom-web-application-development-guide',
